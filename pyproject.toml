@@ -1,0 +1,20 @@
+[project]
+name = "mcp-server-kontomanager"
+version = "0.1.0"
+description = "An MCP server for the yesss.at Kontomanager"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.9.4",
+    "parsel>=1.10.0",
+    "pydantic>=2.11.7",
+    "pydantic-settings>=2.9.1",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[project.scripts]
+mcp-server-kontomanager = "mcp_server_kontomanager.server:mcp"
